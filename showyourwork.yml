@@ -1,0 +1,15 @@
+dependencies:
+  src/figures/my_figure.py:
+    - src/data/simulation.dat
+
+zenodo:
+  - src/data/simulation.dat:
+      id: 5573042 # concept
+      script: src/figures/run_simulation.py
+      title: Simulation results
+      description: >-
+        This is the result of a very expensive simulation.
+        Here is some text describing the simulation in detail,
+        how it was generated, and how to use the dataset.
+      creators:
+        - Luger, Rodrigo
