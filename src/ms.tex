@@ -1,0 +1,36 @@
+% Define document class
+\documentclass[twocolumn]{aastex631}
+
+% Filler text
+\usepackage{blindtext}
+
+% Begin!
+\begin{document}
+
+% Title
+\title{An open source scientific article}
+
+% Author list
+\author{First Author}
+
+% Abstract with filler text
+\begin{abstract}
+    \blindtext
+\end{abstract}
+
+% Main body
+\section{Introduction}
+
+\blindtext
+
+\begin{figure}[ht!]
+    \begin{centering}
+        \includegraphics[width=0.75\linewidth]{figures/my_figure.pdf}
+        \caption{
+            \blindtext
+        }
+        \label{fig:my_figure}
+    \end{centering}
+\end{figure}
+
+\end{document}

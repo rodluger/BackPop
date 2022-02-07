@@ -1,0 +1,17 @@
+dependencies:
+  src/figures/my_figure.py:
+    - src/data/random.dat
+
+zenodo:
+  - src/data/random.dat:
+      id: 5762475 # concept
+      script: src/analysis/random.sh
+      title: More random numbers
+      description: >-
+        Random numbers used to showcase showyourwork!
+      creators:
+        - Luger, Rodrigo
+
+script:
+  sh:
+    bash {script}
