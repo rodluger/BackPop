@@ -1,0 +1,43 @@
+% Define document class
+\documentclass[twocolumn]{aastex631}
+
+% Filler text
+\usepackage{blindtext}
+
+% Begin!
+\begin{document}
+
+% Title
+\title{An open source scientific article}
+
+% Author list
+\author{First Author}
+
+% Abstract with filler text
+\begin{abstract}
+    \blindtext
+\end{abstract}
+
+% Main body
+\section{Introduction}
+
+\blindtext
+
+% A sample figure
+\begin{figure}[ht!]
+    \begin{centering}
+        \includegraphics[width=0.4\linewidth]{figures/graph.pdf}
+        \caption{
+            This figure was generated from a \texttt{.gv} (\texttt{Graphviz}) 
+            file using the 
+            \href{https://graphviz.org/doc/info/lang.html}{dot} 
+            shell command instead of a Python script.
+            Check out the \texttt{showyourwork.yml} file for the instructions
+            we pass to \texttt{showyourwork} that enable figure generation for
+            \texttt{.gv} files.
+        }
+        \label{fig:graph}
+    \end{centering}
+\end{figure}
+
+\end{document}

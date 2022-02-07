@@ -1,0 +1,25 @@
+name: article
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  showyourwork:
+    runs-on: ubuntu-latest
+    name: Build the article PDF
+    concurrency: showyourwork-${{ github.ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Install Graphviz
+        shell: bash -l {0}
+        run: sudo apt install -y graphviz
+
+      - name: Build the article PDF
+        id: build
+        uses: ./showyourwork/showyourwork-action
