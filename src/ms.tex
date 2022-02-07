@@ -1,0 +1,46 @@
+% Define document class
+\documentclass[twocolumn]{aastex631}
+
+% Filler text
+\usepackage{blindtext}
+
+% Begin!
+\begin{document}
+
+% Title
+\title{An open source scientific article}
+
+% Author list
+\author{First Author}
+
+% Abstract with filler text
+\begin{abstract}
+    \blindtext
+\end{abstract}
+
+% Tell LaTeX that all our figures live here
+\graphicspath{{./figures/}}
+
+% Main body
+\section{Introduction}
+
+Figure~\ref{fig:mandelbrot} was automatically generated using \texttt{showyourwork} with minimal instructions from the user.
+By labeling the figure with \verb+\label{fig:mandelbrot}+, the user informs \texttt{showyourwork} that there exists a script in the \texttt{figures} directory called \texttt{mandelbrot.py} that generates the figure files included within that \texttt{figure} environment.
+This behavior can be changed or overridden by specifying custom rules in the \texttt{Snakefile}.
+
+% A sample figure
+\begin{figure}[ht!]
+    \begin{centering}
+        \includegraphics[width=0.4\linewidth]{mandelbrot.pdf}
+        \caption{
+            This figure is included as \texttt{mandelbrot.pdf}; we drop
+            the \texttt{figures/} path since this is included in a single
+            call to \texttt{graphicspath} at the top of the manuscript.
+        }
+        % This label tells showyourwork that the script `figures/mandelbrot.py'
+        % generates the PDF file included above
+        \label{fig:mandelbrot}
+    \end{centering}
+\end{figure}
+
+\end{document}
